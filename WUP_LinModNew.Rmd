@@ -37,15 +37,13 @@ data <- read.csv(file="https://onlinestatbook.com/case_studies_rvls/physical_str
 
 ## Model 1 SIM~ARMS 
  
-## Descriptive results
-
-### Graphical results
+## Descriptive results--Scatter plot
 
 ```{r}
 plot(SIMS~ARM,data=data)
 ```
+This plot shows that 
 
-### scatterplot
 
 ### Numerical results
 
