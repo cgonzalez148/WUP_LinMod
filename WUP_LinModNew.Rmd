@@ -175,7 +175,24 @@ Interval Prediction= (-2.13, 2.43)
 ## Comparing nested models ANOVA Test
 
 ### Model.1 vs Model.3
+
+```{r}
+model.1=lm(SIMS ~ ARM, data=data)
+anova(model.1, model.3)
+summary.lm(model.1)
+```
+
+This numerical summary shows that the model SIM~ARM+GRIP is better than the other model SIMS~GRIP because of the lower RSS which is 188 and the p-value of 0.000000014.
+
 ### Model.2 vs Model.3
+
+```{r}
+model.2=lm(SIMS ~ GRIP, data=data)
+anova(model.2, model.3)
+summary.lm(model.1)
+```
+
+
 
 ## Informally compare Model.1 with model.2
 
