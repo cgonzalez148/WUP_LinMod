@@ -182,7 +182,8 @@ anova(model.1, model.3)
 summary.lm(model.1)
 ```
 
-This numerical summary shows that the model SIM~ARM+GRIP is better than the other model SIMS~GRIP because of the lower RSS which is 188 and the p-value of 0.000000014.
+This numerical summary shows that the ANOVA indicates a significant difference between the models, with a p-value of 0.000004.     
+Model 2: SIM~ARM+GRIP is better than model 1 which is SIMS~ARM since the RSS is 218 and the RSS is model 2 was 188.  
 
 ### Model.2 vs Model.3
 
@@ -192,7 +193,7 @@ anova(model.2, model.3)
 summary.lm(model.1)
 ```
 
-
+This numerical summary shows that the model SIM~ARM+GRIP is better than the other model SIMS~GRIP because of the lower RSS which is 188 and the p-value of 0.000000014.
 
 ## Informally compare Model.1 with model.2
 
