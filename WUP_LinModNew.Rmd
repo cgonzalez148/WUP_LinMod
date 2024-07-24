@@ -116,17 +116,23 @@ This graph shows that the p-value for both the intercept and slope is 0.00000000
 
 #### predict model.2 at target point
 
+```{r}
+newdata = data.frame(ARM = 88, GRIP=94)
+predict(model.2, newdata, interval='pred')
+```
 
-
-#### now add the model fit to our plot for model.2
-  
-
+This numerical summary shows that the sims prediction for GRIP=94 is -0.5, with a prediction interval of (-3.10,2.03). 
 
 ## Model 3 SIM~ARM+GRIP
 
 ### Numerical results (cor)
 
-`
+```{r}
+
+df= data.frame(SIMS=data$SIMS,GRIP=data$GRIP, ARM=data$ARM)
+cor(df)
+```
+This numerical summary shows that the correlation matrix indicates that 
   
 ### Inferential  (Build 2-dimentional model.3)
 
