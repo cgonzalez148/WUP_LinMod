@@ -43,7 +43,7 @@ data <- read.csv(file="https://onlinestatbook.com/case_studies_rvls/physical_str
 plot(SIMS~ARM,data=data)
 ```
 
-This plot shows that as arm strength increases, the level of sims also rises.
+This plot shows that as arm strength increases, the level of SIMS also rises.
 
 
 ### Numerical results
@@ -52,7 +52,7 @@ This plot shows that as arm strength increases, the level of sims also rises.
 cor(SIMS~ARM,data=data)
 ```
 
-The correlation shows that a value of 0.6860073 being positive implies that as strength increases so does sims. If the correlation were negative the sims would decrease instead.
+The correlation shows that a value of 0.6860073 being positive implies that as strength increases so does SIMS. If the correlation were negative the SIMS would decrease instead.
 
 ### Inferential  (Build model.1)
 
@@ -77,7 +77,7 @@ newdata = data.frame(ARM = 88, GRIP=94)
 predict(model.1, newdata, interval='pred')
 ```
 
-This numerical summary shows the sims prediction is a value of 0.7 for ARM=88, with a prediction interval of (-1.73,3.14).
+This numerical summary shows the SIMS prediction is a value of 0.7 for ARM=88, with a prediction interval of (-1.73,3.14).
 
 ## Model 2 SIM~GRIP
 
@@ -87,7 +87,7 @@ This numerical summary shows the sims prediction is a value of 0.7 for ARM=88, w
 plot(SIMS~GRIP,data=data)
 ```
 
-This boxplot indicates that as your grip strength increases, the sims also increase.
+This boxplot indicates that as your grip strength increases, the SIMS also increase.
 
 ### Numerical results 
 
@@ -95,7 +95,7 @@ This boxplot indicates that as your grip strength increases, the sims also incre
 cor(SIMS~GRIP,data=data)
 ```
 
-This numerical summary shows that a stronger grip correlates with a posotive sims outcome.
+This numerical summary shows that a stronger grip correlates with a positive SIMS outcome.
 
 ### Inferential  (Build model.2)
   
@@ -121,7 +121,7 @@ newdata = data.frame(ARM = 88, GRIP=94)
 predict(model.2, newdata, interval='pred')
 ```
 
-This numerical summary shows that the sims prediction for GRIP=94 is -0.5, with a prediction interval of (-3.10,2.03). 
+This numerical summary shows that the SIMS prediction for GRIP=94 is -0.5, with a prediction interval of (-3.10,2.03). 
 
 ## Model 3 SIM~ARM+GRIP
 
@@ -132,7 +132,7 @@ This numerical summary shows that the sims prediction for GRIP=94 is -0.5, with 
 df= data.frame(SIMS=data$SIMS,GRIP=data$GRIP, ARM=data$ARM)
 cor(df)
 ```
-This numerical summary shows that the correlation matrix indicates that 
+This numerical summary shows that the correlation matrix indicates that SIMS correlates with both GRIP and ARM, Grip also correlates with SIMS.
   
 ### Inferential  (Build 2-dimentional model.3)
 
