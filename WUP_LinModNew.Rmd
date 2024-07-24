@@ -82,7 +82,12 @@ This numerical summary shows the sims prediction is a value of 0.7 for ARM=88, w
 ## Model 2 SIM~GRIP
 
 ### Descriptive results--scatterplot
-      
+
+```{r}
+plot(SIMS~GRIP,data=data)
+```
+
+This boxplot indicates that as your grip strength increases, the sims also increase.
 
 ### Numerical results 
 
