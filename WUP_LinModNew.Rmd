@@ -99,6 +99,11 @@ This numerical summary shows that a stronger grip correlates with a posotive sim
 
 ### Inferential  (Build model.2)
   
+```{r}
+model.2 <- lm(SIMS~GRIP,data=data)
+summary.lm(model.2)
+```
+
 
 #### predict model.2 at target point
 
