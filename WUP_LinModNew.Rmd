@@ -125,7 +125,7 @@ This numerical summary shows that the SIMS prediction for GRIP=94 is -0.5, with 
 
 ## Model 3 SIM~ARM+GRIP
 
-### Numerical results (cor)
+### Numerical results 
 
 ```{r}
 
@@ -133,8 +133,17 @@ df= data.frame(SIMS=data$SIMS,GRIP=data$GRIP, ARM=data$ARM)
 cor(df)
 ```
 This numerical summary shows that the correlation matrix indicates that SIMS correlates with both GRIP and ARM, Grip also correlates with SIMS.
-  
+
+### Numerical results (cor)
+
+```{r}
+cor(SIMS~ARM+GRIP,data=data)
+```
+This numerical summary shows that there is a correlation between the SIMS score and the two variables, ARM and GRIP.
+
 ### Inferential  (Build 2-dimentional model.3)
+
+
 
 #### predict model.3 at target point
   
