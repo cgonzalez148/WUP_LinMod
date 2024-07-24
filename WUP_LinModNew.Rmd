@@ -42,23 +42,46 @@ data <- read.csv(file="https://onlinestatbook.com/case_studies_rvls/physical_str
 ```{r}
 plot(SIMS~ARM,data=data)
 ```
-This plot shows that 
+
+This plot shows that as arm strength increases, the level of sims also rises.
 
 
 ### Numerical results
 
+```{r}
+cor(SIMS~ARM,data=data)
+```
+
+The correlation shows that a value of 0.6860073 being positive implies that as strength increases so does sims. If the correlation were negative the sims would decrease instead.
 
 ### Inferential  (Build model.1)
 
-#### Predict at target point
-
+```{r}
+model.1 <- lm(SIMS~ARM,data=data)
+summary.lm(model.1)
+```
 
 #### scatterplot with model fit
-  
+
+```{r}
+plot(SIMS~ARM,data=data)
+abline(model.1, col='red')
+```
+
+This graph shows that the p-values for both the intercept and slope are 0.00000000000000022, leading us to reject the null hypothesis since it is smaller than 0.05.
+
+#### Predict at target point
+
+```{r}
+newdata = data.frame(ARM = 88, GRIP=94)
+predict(model.1, newdata, interval='pred')
+```
+
+This numerical summary shows the sims prediction is a value of 0.7 for ARM=88, with a prediction interval of (-1.73,3.14).
 
 ## Model 2 SIM~GRIP
 
-### Now add in scatterplot
+### Descriptive results--scatterplot
 
 
 ### Numerical results 
