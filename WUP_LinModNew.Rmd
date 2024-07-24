@@ -143,10 +143,22 @@ This numerical summary shows that there is a correlation between the SIMS score 
 
 ### Inferential  (Build 2-dimentional model.3)
 
+```{r}
+model.3 = lm(SIMS ~ ARM + GRIP, data=data)
+summary.lm(model.3)
+```
 
+This numerical summary shows the p-value from F-statistics is 0.000000000000002 which indicates that the data fits the model well.
+
+Intercept p-value is 0.000000000000002
+ARM p-value is 0.00000001
+GRIP p-value is 0.00004
+They are all lower than 0.05
+
+p-value 0.000000000000002 from the model parameters: intercept, coefficient of arm and coefficient of grip.
 
 #### predict model.3 at target point
-  
+
 
 ## Comparing nested models ANOVA Test
 
