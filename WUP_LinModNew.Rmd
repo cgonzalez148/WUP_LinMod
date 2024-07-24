@@ -91,6 +91,11 @@ This boxplot indicates that as your grip strength increases, the sims also incre
 
 ### Numerical results 
 
+```{r}
+cor(SIMS~GRIP,data=data)
+```
+
+This numerical summary shows that a stronger grip correlates with a posotive sims outcome.
 
 ### Inferential  (Build model.2)
   
